@@ -1,0 +1,55 @@
+const cellStyle = {
+     cellStyleWrapper: {
+        height: "80px",
+        width: "80px",
+        backgroundColor: "#1990ff",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        cursor: "pointer",
+        borderRadius: "11px",
+     },
+     whiteCellStyle: {
+        height: "58px",
+        width: "58px",
+        backgroundColor: "#FFF",
+        borderRadius: "100px",
+     },
+     redCellStyle: {
+        height: "58px",
+        width: "58px",
+        backgroundColor: "red",
+        borderRadius: "100px",
+        transition: "background-color 0.5s",
+     },
+     yellowCellStyle: {
+        height: "58px",
+        width: "58px",
+        backgroundColor: "yellow",
+        borderRadius: "100px",
+        transition: "background-color 0.5s",
+     },
+     playerTwo: {
+        height: "36px",
+        width: "36px",
+        backgroundColor: "white",
+        borderRadius: "50%",
+        display: "inline-block",
+        border: "8px solid #F8D146",
+        display: "block",
+        transform: "translate(3px, 3px)",
+    },
+    playerOne: {
+        height: "36px",
+        width: "36px",
+        backgroundColor: "white",
+        borderRadius: "50%",
+        display: "inline-block",
+        border: "8px solid #37AC5D",
+        display: "block",
+        transform: "translate(3px, 3px)",
+    },
+}
+
+export default cellStyle;
