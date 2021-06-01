@@ -41,9 +41,10 @@ const home = ({ ...props }) => {
               color="default"
               className={classes.OneBtnStyle}
               fullWidth
+              onClick = { () => alert("Comming Soon")}
             >
               <img src={One} alt={One} className={classes.ImgOfDifferentBtn} />
-              <div className={ classes.btnStyleForCommingSoon }> Coming soon </div>
+              <div className={ classes.btnStyleForCommingSoon }> Custom Game </div>
             </Button>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6}>
@@ -64,13 +65,14 @@ const home = ({ ...props }) => {
               color="default"
               className={classes.OnlineBtnStyle}
               fullWidth
+              onClick = { () => alert("Comming Soon")}
             >
               <img
                 src={Online}
                 alt={Online}
                 className={classes.ImgOfDifferentBtn}
               />
-              <div  className={ classes.btnStyleForCommingSoon }> Coming soon </div>
+              <div  className={ classes.btnStyleForCommingSoon }> Game Online </div>
             </Button>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6}>
@@ -79,13 +81,14 @@ const home = ({ ...props }) => {
               color="default"
               className={classes.TrainingBtnStyle}
               fullWidth
+              onClick = { () => alert("Comming Soon")}
             >
               <img
                 src={Training}
                 alt={Training}
                 className={classes.ImgOfDifferentBtn}
               />
-             <div  className={ classes.btnStyleForCommingSoon }> Coming soon </div>
+             <div  className={ classes.btnStyleForCommingSoon }> Training Game </div>
             </Button>
           </Grid>
         </Grid>

@@ -17,7 +17,7 @@ const homeStyle = {
     height: "25px",
   },
   OneBtnStyle: {
-    width: "60%",
+    width: "70%",
     color: "#FFF",
     margin: "10px auto",
     borderRadius: "12px",
@@ -27,7 +27,7 @@ const homeStyle = {
     },
   },
   OnlineBtnStyle: {
-    width: "60%",
+    width: "70%",
     color: "#FFF",
     margin: "10px auto",
     borderRadius: "12px",
@@ -37,7 +37,7 @@ const homeStyle = {
     },
   },
   TrainingBtnStyle: {
-    width: "60%",
+    width: "70%",
     color: "#FFF",
     margin: "10px auto",
     borderRadius: "12px",
@@ -47,7 +47,7 @@ const homeStyle = {
     },
   },
   TwoBtnStyle: {
-    width: "60%",
+    width: "70%",
     color: "#FFF",
     margin: "10px auto",
     borderRadius: "12px",
