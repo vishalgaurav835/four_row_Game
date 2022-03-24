@@ -1,0 +1,93 @@
+{
+  "info": {
+    "_postman_id": "4ecfbeb9-3b96-4564-a7fe-a145aeb1aa39",
+    "name": "Test Case Collection(Postman)",
+    "description": "This is the test case Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "{{url}}/users",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "//Status code is 200\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "//Json Value Check for First id is assigned for Leanne Graham name\r",
+              "pm.test(\"Check if user with id1 is Leanne Graham\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData[0].name).to.eql(\"Leanne Graham\");\r",
+              "    \r",
+              "});\r",
+              "//Assertions for environment variables\r",
+              "pm.test(\"Response property matches environment variable\", function () {\r",
+              "  pm.expect(pm.response.json().name).to.eql(pm.environment.get(\"name\"));\r",
+              "});\r",
+              "//response header is present\r",
+              "pm.test(\"Content-Type header is present\", () => {\r",
+              "  pm.response.to.have.header(\"Content-Type\");\r",
+              "});\r",
+              "// response time is less than 200ms\r",
+              "pm.test(\"Response time is less than 300ms\", () => {\r",
+              "  pm.expect(pm.response.responseTime).to.be.below(300);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "id": "9aaa3a4c-ec7e-4b51-a0c2-7f90657396b5"
+          }
+        }
+      ],
+      "_postman_id": "54dd6d05-2a5c-493c-b6b6-da567f42ac4f",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{url}}/users"
+      },
+      "response": []
+    },
+    {
+      "name": "https://jsonplaceholder.typicode.com/users",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "id": "682a85d9-ff38-40ee-aaaf-231b2431f3a7"
+          }
+        }
+      ],
+      "_postman_id": "53d0ae38-364e-41d4-bf95-1d5fafce5f8c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    {\r\n        \"id\": 11,\r\n        \"name\": \"Krishna Rungta\",\r\n        \"username\": \"Bret\",\r\n        \"email\": \"Sincere@april.biz\",\r\n        \"address\": {\r\n            \"street\": \"Kulas Light\",\r\n            \"suite\": \"Apt. 556\",\r\n            \"city\": \"Gwenborough\",\r\n            \"zipcode\": \"92998-3874\",\r\n            \"geo\": {\r\n                \"lat\": \"-37.3159\",\r\n                \"lng\": \"81.1496\"\r\n            }\r\n        },\r\n        \"phone\": \"1-770-736-8031 x56442\",\r\n        \"website\": \"hildegard.org\",\r\n        \"company\": {\r\n            \"name\": \"Romaguera-Crona\",\r\n            \"catchPhrase\": \"Multi-layered client-server neural-net\",\r\n            \"bs\": \"harness real-time e-markets\"\r\n        }\r\n    }\r\n]\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://jsonplaceholder.typicode.com/users"
+      },
+      "response": []
+    }
+  ]
+}
